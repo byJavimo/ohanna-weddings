@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Ohana Weddings — Bodas de lujo con alma",
+    "description": "Organización integral, coordinación y diseño de bodas de lujo, con un enfoque cálido y exclusivo."
+  },
+  "nav": {
+    "about": "Sobre Ohana",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "testimonials": "Opiniones",
+    "blog": "Blog",
+    "cta": "Reserva tu Cita"
+  },
+  "hero": {
+    "eyebrow": "Wedding Planning de Lujo",
+    "title": "Bodas que se sienten como en casa",
+    "subtitle": "Diseñamos y coordinamos celebraciones íntimas y de gran formato con una mirada editorial y un cuidado exquisito por cada detalle.",
+    "cta": "Reserva tu Cita"
+  },
+  "about": {
+    "title": "Sobre Ohana",
+    "body1": "En Ohana creemos que una boda es la expresión más honesta de una historia de amor. Por eso trabajamos codo a codo con cada pareja, desde la primera conversación hasta el último brindis.",
+    "body2": "Nuestro equipo combina años de experiencia en organización de eventos de lujo con una sensibilidad estética minimalista y cálida, siempre al servicio de vuestra visión.",
+    "quote": "Ohana significa familia, y así es como tratamos cada proyecto."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Tres formas de acompañaros, según lo que necesitéis.",
+    "integral": {
+      "title": "Organización Integral",
+      "description": "Planificación completa de la boda, desde el concepto y presupuesto hasta la selección de proveedores y logística del gran día."
+    },
+    "diaB": {
+      "title": "Coordinación del Día B",
+      "description": "Coordinación profesional el día de la boda para que vosotros y vuestras familias disfrutéis sin preocuparos de nada."
+    },
+    "diseno": {
+      "title": "Diseño y Decoración",
+      "description": "Dirección de arte, ambientación floral y diseño de espacios que reflejan vuestra historia y estilo."
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio y Multimedia"
+  },
+  "testimonials": {
+    "title": "Opiniones de Nuestras Parejas"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tendencias, consejos e inspiración para vuestra boda.",
+    "readMore": "Leer más"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Contadnos sobre vuestra boda y os responderemos en menos de 48 horas.",
+    "fields": {
+      "name": "Nombre",
+      "email": "Email",
+      "phone": "Teléfono",
+      "date": "Fecha estimada",
+      "guests": "N.º de invitados",
+      "budget": "Presupuesto estimado (€)",
+      "language": "Idioma preferido"
+    },
+    "placeholders": {
+      "name": "Tu nombre completo",
+      "email": "tu@email.com",
+      "phone": "+34 600 000 000",
+      "guests": "120",
+      "budget": "25000"
+    },
+    "languageOptions": {
+      "es": "Español",
+      "en": "English"
+    },
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "email": "Introduce un email válido.",
+      "number": "Introduce un número válido."
+    },
+    "submit": "Enviar solicitud",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Os contactaremos muy pronto.",
+    "error": "Ha ocurrido un error. Inténtalo de nuevo.",
+    "notConfigured": "El formulario aún no está configurado (falta la variable PUBLIC_FORMSPREE_ID)."
+  },
+  "footer": {
+    "tagline": "Bodas de lujo con alma, en cualquier rincón del mundo.",
+    "rights": "Todos los derechos reservados."
+  }
+}
