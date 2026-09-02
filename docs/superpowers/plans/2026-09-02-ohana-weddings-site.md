@@ -14,7 +14,7 @@
 
 - Colors: ivory `#FDFBF7`, white `#FFFFFF` (Tailwind's built-in white), border `#EAE3D9`, taupe `#8C7A6B`, sepia `#5A4D41`, champagne `#D4C5B9`.
 - Fonts: headings in `"Playfair Display", serif` (Tailwind token `font-serif`), body in `Inter, sans-serif` (Tailwind token `font-sans`).
-- Locales: `es` (default) and `en`. Routing: `prefixDefaultLocale: true`, `redirectToDefaultLocale: true` (both locales prefixed, `/` redirects to `/es/`).
+- Locales: `es` (default) and `en`. Routing: `prefixDefaultLocale: true`, `redirectToDefaultLocale: false` (both locales prefixed, `/` redirects to `/es/` via a manual `src/pages/index.astro` — shipped as `false`, not the originally-specced `true`, per a post-implementation fix; see the design doc's correction note and the execution ledger).
 - Package manager: npm. Astro `output: 'static'` — no server adapter.
 - Tailwind CSS v4 via `@tailwindcss/vite` — no `tailwind.config.mjs`, no `@astrojs/tailwind` (deprecated for v4).
 - Contact form posts to `https://formspree.io/f/{PUBLIC_FORMSPREE_ID}` via client-side `fetch`; `PUBLIC_FORMSPREE_ID` is an env var, empty in `.env.example`.

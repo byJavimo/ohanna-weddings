@@ -38,15 +38,25 @@ i18n: {
   defaultLocale: 'es',
   routing: {
     prefixDefaultLocale: true,
-    redirectToDefaultLocale: true,
+    redirectToDefaultLocale: false,
   },
 }
 ```
 
-- `/src/pages/index.astro` — thin redirect page (Astro's i18n middleware
-  handles `/` → `/es/` automatically via `redirectToDefaultLocale`; this
-  file exists to satisfy the requested structure and as a fallback manual
-  redirect if needed).
+> **Post-implementation correction:** `redirectToDefaultLocale` shipped as
+> `false`, not `true` as originally specified above. With it `true`,
+> Astro auto-generates its own redirect at `/` that silently wins over
+> the hand-written `src/pages/index.astro` (a build WARN on every build,
+> from Task 1 onward). Setting it `false` makes the manual page
+> authoritative again — which was always the intent of having that file
+> (see below) — with zero warnings. Net user-facing behavior is
+> unchanged (`/` still redirects to `/es/`).
+
+- `/src/pages/index.astro` — a manual redirect page (`Astro.redirect('/es/')`),
+  authoritative because `redirectToDefaultLocale: false` disables Astro's
+  competing auto-redirect; this guarantees the redirect works regardless
+  of the framework's internal route-priority resolution, and satisfies
+  the requested file structure.
 - `/src/pages/[lang]/index.astro` — the actual page, rendered for both
   `es` and `en` via `getStaticPaths()` returning `[{params: {lang: 'es'}},
   {params: {lang: 'en'}}]`. Reads `Astro.params.lang`, loads the matching
