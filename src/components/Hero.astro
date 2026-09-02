@@ -1,0 +1,20 @@
+---
+import HeroSlider from './HeroSlider.jsx';
+import { useTranslations, type Lang } from '../i18n/utils';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const images = ['/images/hero-1.svg', '/images/hero-2.svg', '/images/hero-3.svg', '/images/hero-4.svg'];
+---
+<section class="relative h-[90vh] min-h-[560px] flex items-center justify-center overflow-hidden">
+  <HeroSlider client:load images={images} />
+  <div class="absolute inset-0 bg-sepia/40 z-[1]"></div>
+  <div class="relative z-10 text-center px-6 max-w-2xl">
+    <p class="font-sans text-sm tracking-[0.2em] uppercase text-ivory/90 mb-4">{t('hero.eyebrow')}</p>
+    <h1 class="font-serif text-4xl md:text-6xl text-ivory leading-tight">{t('hero.title')}</h1>
+    <p class="mt-6 text-ivory/90 text-lg">{t('hero.subtitle')}</p>
+    <a href={`/${lang}/#contact`} class="inline-block mt-8 rounded-2xl bg-ivory text-sepia px-8 py-3 text-sm tracking-wide hover:bg-champagne transition-colors">
+      {t('hero.cta')}
+    </a>
+  </div>
+</section>
