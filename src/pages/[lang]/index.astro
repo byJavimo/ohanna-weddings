@@ -3,7 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/Hero.astro';
 import About from '../../components/About.astro';
 import Services from '../../components/Services.astro';
+import PortfolioGrid from '../../components/PortfolioGrid.jsx';
 import { useTranslations, type Lang } from '../../i18n/utils';
+import { portfolioItems } from '../../data/portfolio';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -16,4 +18,5 @@ const t = useTranslations(lang);
   <Hero lang={lang} />
   <About lang={lang} />
   <Services lang={lang} />
+  <PortfolioGrid client:visible lang={lang} items={portfolioItems} />
 </Layout>
