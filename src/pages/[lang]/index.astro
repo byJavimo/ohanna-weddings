@@ -5,6 +5,7 @@ import About from '../../components/About.astro';
 import Services from '../../components/Services.astro';
 import PortfolioGrid from '../../components/PortfolioGrid.jsx';
 import Testimonials from '../../components/Testimonials.jsx';
+import BlogSection from '../../components/BlogSection.astro';
 import { useTranslations, type Lang } from '../../i18n/utils';
 import { portfolioItems } from '../../data/portfolio';
 import { testimonials } from '../../data/testimonials';
@@ -22,4 +23,5 @@ const t = useTranslations(lang);
   <Services lang={lang} />
   <PortfolioGrid client:visible lang={lang} items={portfolioItems} />
   <Testimonials client:visible lang={lang} items={testimonials} />
+  <BlogSection lang={lang} />
 </Layout>
