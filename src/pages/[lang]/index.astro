@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+---
+<Layout lang={lang} title={t('meta.title')} description={t('meta.description')}>
+  <p class="pt-32 text-center text-taupe">{t('hero.title')}</p>
+</Layout>
