@@ -1,0 +1,16 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-border bg-white">
+  <div class="mx-auto max-w-6xl px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="text-center md:text-left">
+      <p class="font-serif text-lg text-sepia">Ohana Weddings</p>
+      <p class="text-sm text-taupe mt-1">{t('footer.tagline')}</p>
+    </div>
+    <p class="text-xs text-taupe">&copy; {year} Ohana Weddings. {t('footer.rights')}</p>
+  </div>
+</footer>
