@@ -34,7 +34,7 @@ const links = [
         <Menu className="w-6 h-6" />
       </label>
     </div>
-    <nav class="hidden peer-checked:flex flex-col gap-4 absolute top-full inset-x-0 bg-ivory border-b border-border px-6 py-6 md:hidden">
+    <nav class="hidden max-md:peer-checked:flex flex-col gap-4 absolute top-full inset-x-0 bg-ivory border-b border-border px-6 py-6">
       {links.map((link) => (
         <a href={link.href} class="text-sm text-taupe hover:text-sepia transition-colors">{link.label}</a>
       ))}
