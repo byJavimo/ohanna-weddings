@@ -72,7 +72,7 @@ export default function PortfolioGrid({ lang, items }) {
             onClick={() => setActiveItem(null)}
           >
             <motion.div
-              className="relative max-w-2xl w-full bg-white rounded-2xl overflow-hidden shadow-soft"
+              className="relative max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-soft"
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
@@ -86,7 +86,11 @@ export default function PortfolioGrid({ lang, items }) {
               >
                 <X className="w-5 h-5" />
               </button>
-              <img src={activeItem.media[0].src} alt={activeItem.title[lang]} className="w-full h-auto" />
+              {activeItem.media[0].type === 'video' ? (
+                <video src={activeItem.media[0].src} controls className="w-full h-auto" />
+              ) : (
+                <img src={activeItem.media[0].src} alt={activeItem.title[lang]} className="w-full h-auto" />
+              )}
               <div className="p-6">
                 <h3 className="font-serif text-xl text-sepia">{activeItem.title[lang]}</h3>
                 <p className="mt-2 text-sm text-taupe leading-relaxed">{activeItem.description[lang]}</p>

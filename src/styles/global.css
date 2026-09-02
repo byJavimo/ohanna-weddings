@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+
+@source "../**/*.{astro,html,js,jsx,ts,tsx}";
 
 @theme {
   --color-ivory: #FDFBF7;

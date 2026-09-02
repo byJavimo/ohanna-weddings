@@ -19,7 +19,6 @@ const links = [
 <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ivory/80 border-b border-border">
   <div class="relative mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
     <a href={`${prefix}/`} class="font-serif text-xl text-sepia tracking-wide">Ohana Weddings</a>
-    <input type="checkbox" id="menu-toggle" class="peer hidden" />
     <nav class="hidden md:flex items-center gap-8">
       {links.map((link) => (
         <a href={link.href} class="text-sm text-taupe hover:text-sepia transition-colors">{link.label}</a>
@@ -30,14 +29,54 @@ const links = [
       <a href={`${prefix}/#contact`} class="hidden sm:inline-block rounded-2xl bg-sepia text-ivory text-sm px-5 py-2.5 hover:bg-taupe transition-colors">
         {t('nav.cta')}
       </a>
-      <label for="menu-toggle" class="md:hidden cursor-pointer text-sepia" aria-label="Menu">
+      <button
+        type="button"
+        id="menu-btn"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Menu"
+        class="md:hidden p-2.5 -m-2.5 text-sepia"
+      >
         <Menu className="w-6 h-6" />
-      </label>
+      </button>
     </div>
-    <nav class="hidden max-md:peer-checked:flex flex-col gap-4 absolute top-full inset-x-0 bg-ivory border-b border-border px-6 py-6">
+    <nav id="mobile-nav" hidden class="md:hidden flex flex-col gap-4 absolute top-full inset-x-0 bg-ivory border-b border-border px-6 py-6">
       {links.map((link) => (
         <a href={link.href} class="text-sm text-taupe hover:text-sepia transition-colors">{link.label}</a>
       ))}
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  (function () {
+    const btn = document.getElementById('menu-btn');
+    const nav = document.getElementById('mobile-nav');
+    if (!btn || !nav) return;
+
+    function closeNav() {
+      nav.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function openNav() {
+      nav.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    nav.addEventListener('click', (e) => {
+      if (e.target instanceof Element && e.target.closest('a')) {
+        closeNav();
+      }
+    });
+  })();
+</script>
