@@ -10,7 +10,10 @@ empty repository — no existing code to integrate with.
 
 ## Stack
 
-- **Astro 4+** with `@astrojs/react` and `@astrojs/tailwind` integrations.
+- **Astro** with `@astrojs/react` integration and Tailwind CSS v4 via the
+  `@tailwindcss/vite` plugin (the old `@astrojs/tailwind` integration is
+  deprecated as of Tailwind v4 — confirmed via current docs, since this
+  build happens well past the assistant's knowledge cutoff).
 - **Output: `static`** — no server runtime needed. The contact form posts to
   Formspree via client-side `fetch`, so SSR/adapters are unnecessary.
 - **TypeScript** throughout (`.astro` frontmatter, `.ts` data/i18n utils,
@@ -97,11 +100,22 @@ and lets content grow independently of UI strings.
 ## Image Placeholders
 
 No real photography exists yet. Placeholder assets are locally generated
-flat-color/gradient SVGs in `/public/images/` (portfolio, hero, testimonial
-avatars, blog covers), using the ivory/champagne/sepia palette, sized
-correctly for their slot. All are wired through Astro's `<Image>` component
-for automatic optimization, so swapping in real photos later is a drop-in
-file replacement — no code changes required.
+flat-color/gradient SVGs (a small Node script writes them once), using the
+ivory/champagne/sepia palette, sized correctly for their slot. Two
+locations, driven by a real constraint: Astro's `<Image>` component is
+server-only and can't be used inside a React island, while React islands
+need a plain string `src` for `<img>`.
+
+- `src/assets/images/blog-*.svg` — consumed only by `BlogSection.astro`
+  (a pure Astro component), imported and passed to `<Image>` for automatic
+  optimization.
+- `public/images/{hero,portfolio,testimonial}-*.svg` — consumed by the
+  React islands (`HeroSlider`, `PortfolioGrid`, `Testimonials`), referenced
+  as plain path strings (`/images/hero-1.svg`) and rendered with native
+  `<img>`.
+
+Swapping in real photos later is a drop-in file replacement in either
+location — no code changes required.
 
 ## Contact Form
 
@@ -121,26 +135,31 @@ Presupuesto estimado, Idioma preferido.
 - States: idle → submitting (disabled button + spinner) → success (message)
   / error (message + retry).
 
-## Design System (Tailwind theme)
+## Design System (Tailwind v4 theme)
 
-```js
-colors: {
-  ivory: '#FDFBF7',
-  white: '#FFFFFF',
-  border: '#EAE3D9',
-  taupe: '#8C7A6B',
-  sepia: '#5A4D41',
-  champagne: '#D4C5B9',
-}
-fontFamily: {
-  serif: ['"Playfair Display"', 'serif'],
-  sans: ['Inter', 'sans-serif'],
+Defined CSS-first in `src/styles/global.css` via `@theme` (no
+`tailwind.config.mjs` — Tailwind v4 doesn't require one for this):
+
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FDFBF7;
+  --color-border: #EAE3D9;
+  --color-taupe: #8C7A6B;
+  --color-sepia: #5A4D41;
+  --color-champagne: #D4C5B9;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: Inter, sans-serif;
+  --shadow-soft: 0 8px 40px rgba(140, 122, 107, 0.12);
 }
 ```
 
-`rounded-2xl` as the default radius on cards/containers; soft high-blur
-low-opacity shadows (`shadow-[0_8px_40px_rgba(140,122,107,0.12)]` style
-utility) for the blurred-shadow look from the brief.
+(White is already Tailwind's built-in `white` = `#FFFFFF`, no override
+needed.) `rounded-2xl` is Tailwind's built-in 1rem radius — used directly
+as the default on cards/containers. `shadow-soft` is the custom soft
+high-blur low-opacity shadow utility for the blurred-shadow look from the
+brief.
 
 ## File Structure
 
@@ -176,7 +195,6 @@ utility) for the blurred-shadow look from the brief.
 └── /images
     └── ... placeholder SVGs
 astro.config.mjs
-tailwind.config.mjs
 .env.example
 ```
 
