@@ -82,7 +82,7 @@
     "submitting": "Enviando...",
     "success": "¡Gracias! Os contactaremos muy pronto.",
     "error": "Ha ocurrido un error. Inténtalo de nuevo.",
-    "notConfigured": "El formulario aún no está configurado (falta la variable PUBLIC_FORMSPREE_ID)."
+    "notConfigured": "El formulario aún no está configurado (falta la variable PUBLIC_WEB3FORMS_KEY)."
   },
   "footer": {
     "tagline": "Bodas de lujo con alma, en cualquier rincón del mundo.",

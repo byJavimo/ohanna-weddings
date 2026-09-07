@@ -19,14 +19,14 @@ El sitio queda disponible en `http://localhost:4321`. La raíz `/` redirige a `/
 
 ## Configurar el formulario de contacto
 
-El formulario envía las solicitudes a [Formspree](https://formspree.io):
+El formulario envía las solicitudes a [Web3Forms](https://web3forms.com):
 
-1. Crea una cuenta gratuita en Formspree y un nuevo formulario.
-2. Copia el ID del formulario (el segmento tras `/f/` en la URL del endpoint).
+1. Ve a https://web3forms.com y genera una Access Key gratuita con tu email.
+2. Copia la Access Key.
 3. Crea un archivo `.env` en la raíz del proyecto (no se versiona) con:
 
 ```
-PUBLIC_FORMSPREE_ID=tu_id_aqui
+PUBLIC_WEB3FORMS_KEY=tu_key_aqui
 ```
 
 4. Reinicia `npm run dev`. Sin esta variable, la sección de contacto muestra un aviso de "formulario no configurado" en vez de fallar.

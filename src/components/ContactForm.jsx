@@ -7,7 +7,7 @@ const initialState = {
 
 export default function ContactForm({ lang }) {
   const t = useTranslations(lang);
-  const formId = import.meta.env.PUBLIC_FORMSPREE_ID;
+  const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY;
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
@@ -34,20 +34,21 @@ export default function ContactForm({ lang }) {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    if (!formId) {
-      console.warn('PUBLIC_FORMSPREE_ID is not set — the contact form cannot submit yet.');
+    if (!accessKey) {
+      console.warn('PUBLIC_WEB3FORMS_KEY is not set — the contact form cannot submit yet.');
       setStatus('error');
       return;
     }
 
     setStatus('submitting');
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, access_key: accessKey }),
       });
-      if (!res.ok) throw new Error('Request failed');
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error('Request failed');
       setStatus('success');
       setValues(initialState);
     } catch {
@@ -64,7 +65,7 @@ export default function ContactForm({ lang }) {
     { name: 'budget', type: 'number' },
   ];
 
-  if (!formId) {
+  if (!accessKey) {
     return (
       <section id="contact" className="mx-auto max-w-2xl px-6 py-24 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-sepia">{t('contact.title')}</h2>

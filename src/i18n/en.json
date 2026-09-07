@@ -82,7 +82,7 @@
     "submitting": "Sending...",
     "success": "Thank you! We'll be in touch soon.",
     "error": "Something went wrong. Please try again.",
-    "notConfigured": "The form isn't configured yet (missing PUBLIC_FORMSPREE_ID)."
+    "notConfigured": "The form isn't configured yet (missing PUBLIC_WEB3FORMS_KEY)."
   },
   "footer": {
     "tagline": "Luxury weddings with soul, anywhere in the world.",
