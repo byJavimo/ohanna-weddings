@@ -1,0 +1,12 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  height?: 'md' | 'lg';
+}
+const { src, alt, height = 'md' } = Astro.props;
+const heightClass = height === 'lg' ? 'h-[70vh] min-h-[420px]' : 'h-[48vh] min-h-[320px]';
+---
+<section class={`${heightClass} w-full overflow-hidden`}>
+  <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+</section>

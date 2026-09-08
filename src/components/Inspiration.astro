@@ -1,0 +1,25 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const images = [
+  '/images/portfolio-1.svg',
+  '/images/portfolio-2.svg',
+  '/images/portfolio-3.svg',
+  '/images/portfolio-4.svg',
+];
+---
+<section id="inspiration" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="text-center max-w-xl mx-auto">
+    <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('inspiration.title')}</h2>
+    <p class="mt-4 text-taupe leading-relaxed">{t('inspiration.subtitle')}</p>
+  </div>
+  <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+    {images.map((src) => (
+      <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-border">
+        <img src={src} alt="" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+    ))}
+  </div>
+</section>

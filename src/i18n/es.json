@@ -1,54 +1,90 @@
 {
   "meta": {
-    "title": "Ohana Weddings — Bodas de lujo con alma",
-    "description": "Organización integral, coordinación y diseño de bodas de lujo, con un enfoque cálido y exclusivo."
+    "title": "Ohana — Wedding & Event Planning",
+    "description": "Organización y diseño de bodas y eventos en Madrid y destino, con un acompañamiento cercano de principio a fin."
   },
   "nav": {
+    "home": "Inicio",
+    "weddings": "Weddings",
+    "events": "Events",
     "about": "Sobre Ohana",
-    "services": "Servicios",
-    "portfolio": "Portafolio",
-    "testimonials": "Opiniones",
-    "blog": "Blog",
-    "cta": "Reserva tu Cita"
+    "contact": "Contacto"
   },
   "hero": {
-    "eyebrow": "Wedding Planning de Lujo",
-    "title": "Bodas que se sienten como en casa",
-    "subtitle": "Diseñamos y coordinamos celebraciones íntimas y de gran formato con una mirada editorial y un cuidado exquisito por cada detalle.",
-    "cta": "Reserva tu Cita"
+    "eyebrow": "El amor nos reúne",
+    "title": "Wedding & Event Planning",
+    "location": "",
+    "subtitle": "Celebraciones pensadas para vosotros, cuidadas de principio a fin y creadas para disfrutar de lo que de verdad importa: estar juntos.",
+    "cta": "Cuéntanos qué vamos a celebrar"
   },
   "about": {
     "title": "Sobre Ohana",
-    "body1": "En Ohana creemos que una boda es la expresión más honesta de una historia de amor. Por eso trabajamos codo a codo con cada pareja, desde la primera conversación hasta el último brindis.",
-    "body2": "Nuestro equipo combina años de experiencia en organización de eventos de lujo con una sensibilidad estética minimalista y cálida, siempre al servicio de vuestra visión.",
-    "quote": "Ohana significa familia, y así es como tratamos cada proyecto."
+    "body1": "Ohana significa familia. Una palabra que habla de unión, de vínculos y de todo aquello que merece la pena compartir.",
+    "body2": "Creamos y organizamos bodas y eventos con personalidad, cuidando cada decisión y acompañando todo el proceso para dar forma a una experiencia que hable de vosotros, de vuestra historia y de vuestra gente.",
+    "body3": "Nos gusta hacer las cosas con intención: pensar, diseñar, organizar y cuidar, para que todo tenga un porqué y cada detalle encuentre su lugar.",
+    "quote": "Qué suerte habernos encontrado."
   },
-  "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Tres formas de acompañaros, según lo que necesitéis.",
+  "weddings": {
+    "title": "Weddings",
+    "intro1": "Hay muchas formas de celebrar una boda. La vuestra debería parecerse únicamente a vosotros.",
+    "intro2": "Os acompañamos desde las primeras decisiones hasta el último momento del gran día, cuidando la planificación, el diseño y todo lo que sucede entre medias.",
+    "intro3": "Vosotros la vivís. Nosotros hacemos que todo ocurra.",
+    "servicesTitle": "Servicios",
+    "servicesSubtitle": "Cada boda empieza de una manera distinta. Por eso, también hay diferentes formas de acompañaros.",
     "integral": {
-      "title": "Organización Integral",
-      "description": "Planificación completa de la boda, desde el concepto y presupuesto hasta la selección de proveedores y logística del gran día."
+      "title": "Organización integral",
+      "tagline": "Un acompañamiento completo para dar forma a vuestra boda.",
+      "description": "Os acompañamos durante todo el proceso de organización y diseño de vuestra boda: búsqueda y gestión de proveedores, presupuesto, concepto creativo, planificación, timings y coordinación completa del gran día.",
+      "includes": "planificación · diseño · proveedores · presupuesto · timings · coordinación Día B"
     },
     "diaB": {
-      "title": "Coordinación del Día B",
-      "description": "Coordinación profesional el día de la boda para que vosotros y vuestras familias disfrutéis sin preocuparos de nada."
+      "title": "Coordinación día B",
+      "tagline": "Habéis organizado cada detalle. Ahora toca vivirlo.",
+      "description": "Nos incorporamos en la recta final para conocer todo lo que habéis preparado, revisar cada detalle y coordinar a los proveedores.\n\nCreamos el timing definitivo y nos encargamos de que cada momento suceda como estaba previsto, resolviendo cualquier imprevisto sin que vosotros tengáis que estar pendientes de nada.\n\nEl día de vuestra boda, vuestra única tarea será estar presentes y disfrutar."
     },
-    "diseno": {
-      "title": "Diseño y Decoración",
-      "description": "Dirección de arte, ambientación floral y diseño de espacios que reflejan vuestra historia y estilo."
+    "finde": {
+      "title": "Fin de semana Ohana",
+      "tagline": "Cuando un día se queda corto.",
+      "description": "Diseñamos y coordinamos una celebración que empieza antes de la boda y termina después: bienvenida o preboda, boda y postboda.\n\nNos encargamos de que los diferentes momentos formen parte de una misma experiencia y de que vuestros invitados se sientan acompañados durante todo el fin de semana.",
+      "includes": "Preboda · Boda · Postboda"
+    },
+    "intimas": {
+      "title": "Bodas íntimas",
+      "tagline": "Menos invitados. La misma emoción.",
+      "description": "Organización y diseño de bodas íntimas de hasta aproximadamente 30 invitados, donde cada elección adquiere todavía más importancia."
+    },
+    "destino": {
+      "title": "Bodas destino",
+      "tagline": "España como escenario. Vuestra gente alrededor.",
+      "description": "Organizamos bodas para parejas que viven fuera de Madrid o de España y quieren celebrar aquí, ocupándonos de la planificación, búsqueda de espacios y proveedores, logística y coordinación de invitados."
+    },
+    "medida": {
+      "title": "Organización a medida",
+      "tagline": "Hay bodas que no necesitan empezar de cero ni encajar en un paquete.",
+      "description": "Creamos un acompañamiento personalizado según el punto en el que os encontréis: búsqueda de proveedores, diseño, asesoramiento, revisión de presupuesto, planificación o necesidades concretas.\n\nSolo aquello en lo que realmente nos necesitéis."
     }
   },
-  "portfolio": {
-    "title": "Portafolio y Multimedia"
+  "events": {
+    "title": "Events",
+    "intro1": "Hay días que merecen algo más que una celebración.",
+    "intro2": "Creamos eventos personales y de marca pensados desde el concepto hasta la ejecución, cuidando el espacio, la estética, los proveedores y cada detalle de la experiencia.",
+    "intro3": "Una buena idea se recuerda. Una buena experiencia, todavía más.",
+    "servicesTitle": "Servicios",
+    "privados": {
+      "title": "Eventos privados",
+      "tagline": "Hay momentos que simplemente merecen celebrarse.",
+      "description": "Cumpleaños, aniversarios, pedidas, cenas especiales, fiestas privadas y otras celebraciones personales.\n\nNos encargamos del concepto, espacio, proveedores, decoración, gastronomía, música y coordinación para convertir una ocasión especial en una experiencia pensada alrededor de vosotros."
+    },
+    "corporativos": {
+      "title": "Eventos corporativos",
+      "tagline": "Eventos que representan quiénes sois.",
+      "description": "Diseñamos y coordinamos encuentros de empresa cuidando tanto la organización como la experiencia de los asistentes.\n\nPresentaciones, cenas corporativas, encuentros de equipo, celebraciones, jornadas y eventos especiales.",
+      "includes": "Concepto · Venue · Producción · Proveedores · Timing · Coordinación"
+    }
   },
-  "testimonials": {
-    "title": "Opiniones de Nuestras Parejas"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Tendencias, consejos e inspiración para vuestra boda.",
-    "readMore": "Leer más"
+  "inspiration": {
+    "title": "Inspiración",
+    "subtitle": "Una pequeña selección visual que habla de nuestro universo: mesas que reúnen, lugares que inspiran, detalles que cuentan historias, momentos que se quedan."
   },
   "contact": {
     "title": "Contacto",
@@ -85,7 +121,10 @@
     "notConfigured": "El formulario aún no está configurado (falta la variable PUBLIC_WEB3FORMS_KEY)."
   },
   "footer": {
-    "tagline": "Bodas de lujo con alma, en cualquier rincón del mundo.",
+    "brand": "OHANA",
+    "line1": "Wedding & Event Planning",
+    "line2": "",
+    "tagline": "El amor nos reúne.",
     "rights": "Todos los derechos reservados."
   }
 }

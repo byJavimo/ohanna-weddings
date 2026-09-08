@@ -1,0 +1,34 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const services = ['integral', 'diaB', 'finde', 'intimas', 'destino', 'medida'] as const;
+---
+<section id="weddings" class="mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
+  <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('weddings.title')}</h2>
+  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('weddings.intro1')}</p>
+  <p class="mt-6 text-taupe leading-relaxed text-lg">{t('weddings.intro2')}</p>
+  <p class="mt-6 font-serif italic text-xl text-sepia">{t('weddings.intro3')}</p>
+</section>
+
+<section class="bg-white border-y border-border">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="text-center max-w-xl mx-auto">
+      <h3 class="font-serif text-2xl md:text-3xl text-sepia">{t('weddings.servicesTitle')}</h3>
+      <p class="mt-4 text-taupe">{t('weddings.servicesSubtitle')}</p>
+    </div>
+    <div class="mt-14 grid gap-8 md:grid-cols-2">
+      {services.map((key) => (
+        <div class="rounded-2xl border border-border p-8 shadow-soft bg-ivory">
+          <h4 class="font-serif text-xl text-sepia">{t(`weddings.${key}.title`)}</h4>
+          <p class="mt-2 text-sm italic text-taupe">{t(`weddings.${key}.tagline`)}</p>
+          <p class="mt-4 text-sm text-taupe leading-relaxed whitespace-pre-line">{t(`weddings.${key}.description`)}</p>
+          {t(`weddings.${key}.includes`) !== `weddings.${key}.includes` && (
+            <p class="mt-4 text-xs tracking-wide uppercase text-taupe/80">{t(`weddings.${key}.includes`)}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

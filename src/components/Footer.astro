@@ -6,11 +6,11 @@ const t = useTranslations(lang);
 const year = new Date().getFullYear();
 ---
 <footer class="border-t border-border bg-white">
-  <div class="mx-auto max-w-6xl px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-    <div class="text-center md:text-left">
-      <p class="font-serif text-lg text-sepia">Ohana Weddings</p>
-      <p class="text-sm text-taupe mt-1">{t('footer.tagline')}</p>
-    </div>
-    <p class="text-xs text-taupe">&copy; {year} Ohana Weddings. {t('footer.rights')}</p>
+  <div class="mx-auto max-w-6xl px-6 py-16 flex flex-col items-center text-center gap-2">
+    <p class="font-serif text-lg tracking-[0.15em] text-sepia">{t('footer.brand')}</p>
+    <p class="text-sm text-taupe">{t('footer.line1')}</p>
+    <p class="text-sm text-taupe">{t('footer.line2')}</p>
+    <p class="mt-6 font-serif italic text-lg text-sepia">{t('footer.tagline')}</p>
+    <p class="mt-8 text-xs text-taupe">&copy; {year} Ohana. {t('footer.rights')}</p>
   </div>
 </footer>

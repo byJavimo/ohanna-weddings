@@ -4,9 +4,10 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
-<section id="about" class="mx-auto max-w-4xl px-6 py-24 text-center">
+<section id="about" class="mx-auto max-w-3xl px-6 py-32 md:py-40 text-center">
   <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('about.title')}</h2>
-  <p class="mt-6 text-taupe leading-relaxed">{t('about.body1')}</p>
-  <p class="mt-4 text-taupe leading-relaxed">{t('about.body2')}</p>
-  <p class="mt-8 font-serif italic text-xl text-sepia">&ldquo;{t('about.quote')}&rdquo;</p>
+  <p class="mt-10 text-taupe leading-relaxed text-lg">{t('about.body1')}</p>
+  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('about.body2')}</p>
+  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('about.body3')}</p>
+  <p class="mt-14 font-serif italic text-2xl text-sepia">&ldquo;{t('about.quote')}&rdquo;</p>
 </section>

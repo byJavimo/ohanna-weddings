@@ -9,15 +9,16 @@ const t = useTranslations(lang);
 const prefix = `/${lang}`;
 
 const links = [
+  { href: `${prefix}/`, label: t('nav.home') },
+  { href: `${prefix}/#weddings`, label: t('nav.weddings') },
+  { href: `${prefix}/#events`, label: t('nav.events') },
   { href: `${prefix}/#about`, label: t('nav.about') },
-  { href: `${prefix}/#services`, label: t('nav.services') },
-  { href: `${prefix}/#portfolio`, label: t('nav.portfolio') },
-  { href: `${prefix}/#testimonials`, label: t('nav.testimonials') },
+  { href: `${prefix}/#contact`, label: t('nav.contact') },
 ];
 ---
 <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ivory/80 border-b border-border">
   <div class="relative mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-    <a href={`${prefix}/`} class="font-serif text-xl text-sepia tracking-wide">Ohana Weddings</a>
+    <a href={`${prefix}/`} class="font-serif text-xl text-sepia tracking-wide">Ohana</a>
     <nav class="hidden md:flex items-center gap-8">
       {links.map((link) => (
         <a href={link.href} class="text-sm text-taupe hover:text-sepia transition-colors">{link.label}</a>
@@ -25,9 +26,6 @@ const links = [
     </nav>
     <div class="flex items-center gap-4">
       <LanguageSwitcher client:load lang={lang} />
-      <a href={`${prefix}/#contact`} class="hidden sm:inline-block rounded-2xl bg-sepia text-ivory text-sm px-5 py-2.5 hover:bg-taupe transition-colors">
-        {t('nav.cta')}
-      </a>
       <button
         type="button"
         id="menu-btn"
