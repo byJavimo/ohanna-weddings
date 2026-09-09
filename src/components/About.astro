@@ -4,10 +4,13 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
-<section id="about" class="mx-auto max-w-3xl px-6 py-32 md:py-40 text-center">
-  <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('about.title')}</h2>
-  <p class="mt-10 text-taupe leading-relaxed text-lg">{t('about.body1')}</p>
-  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('about.body2')}</p>
-  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('about.body3')}</p>
-  <p class="mt-14 font-serif italic text-2xl text-sepia">&ldquo;{t('about.quote')}&rdquo;</p>
+<section id="about" class="relative mx-auto max-w-4xl px-6 py-32 md:py-48 text-center overflow-hidden">
+  <span class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 font-serif text-[34vw] md:text-[16vw] leading-none text-champagne/25 select-none" aria-hidden="true">01</span>
+  <div class="relative">
+    <h2 class="font-serif text-4xl md:text-6xl text-ink" data-reveal>{t('about.title')}</h2>
+    <p class="mt-12 text-taupe leading-relaxed text-lg md:text-xl font-light" data-reveal>{t('about.body1')}</p>
+    <p class="mt-8 text-taupe leading-relaxed text-lg md:text-xl font-light" data-reveal style="transition-delay:0.08s">{t('about.body2')}</p>
+    <p class="mt-8 text-taupe leading-relaxed text-lg md:text-xl font-light" data-reveal style="transition-delay:0.16s">{t('about.body3')}</p>
+    <p class="mt-16 font-serif italic text-3xl md:text-4xl text-ink" data-reveal style="transition-delay:0.24s">&ldquo;{t('about.quote')}&rdquo;</p>
+  </div>
 </section>

@@ -93,17 +93,12 @@
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
-      "date": "Estimated date",
-      "guests": "Number of guests",
-      "budget": "Estimated budget (€)",
       "language": "Preferred language"
     },
     "placeholders": {
       "name": "Your full name",
       "email": "you@email.com",
-      "phone": "+1 555 000 0000",
-      "guests": "120",
-      "budget": "25000"
+      "phone": "+1 555 000 0000"
     },
     "languageOptions": {
       "es": "Español",

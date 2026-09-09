@@ -7,6 +7,8 @@ interface Props {
 const { src, alt, height = 'md' } = Astro.props;
 const heightClass = height === 'lg' ? 'h-[70vh] min-h-[420px]' : 'h-[48vh] min-h-[320px]';
 ---
-<section class={`${heightClass} w-full overflow-hidden`}>
-  <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+<section class={`${heightClass} w-full overflow-hidden relative`} data-reveal="scale">
+  <div class="absolute -inset-y-16 inset-x-0 parallax-layer" data-parallax="0.15">
+    <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+  </div>
 </section>

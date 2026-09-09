@@ -8,13 +8,63 @@
   --color-taupe: #8C7A6B;
   --color-sepia: #5A4D41;
   --color-champagne: #D4C5B9;
+  --color-ink: #221D18;
   --font-serif: "Playfair Display", serif;
   --font-sans: Inter, sans-serif;
   --shadow-soft: 0 8px 40px rgba(140, 122, 107, 0.12);
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
   body {
     @apply bg-ivory text-sepia font-sans;
+    overflow-x: hidden;
+    width: 100%;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Scroll-reveal system: elements start hidden, JS in Layout.astro flips
+   data-revealed once they cross the viewport threshold. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+[data-reveal="scale"] {
+  transform: translateY(0) scale(1.06);
+}
+[data-reveal][data-revealed] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+[data-reveal-group] > [data-reveal] {
+  transition-delay: calc(var(--reveal-index, 0) * 90ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Parallax layers: background moves slower than content as the section scrolls. */
+.parallax-layer {
+  will-change: transform;
+}
+
+#site-header[data-scrolled] .header-inner {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
 }

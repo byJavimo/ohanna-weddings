@@ -5,12 +5,12 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-border bg-white">
-  <div class="mx-auto max-w-6xl px-6 py-16 flex flex-col items-center text-center gap-2">
-    <p class="font-serif text-lg tracking-[0.15em] text-sepia">{t('footer.brand')}</p>
-    <p class="text-sm text-taupe">{t('footer.line1')}</p>
-    <p class="text-sm text-taupe">{t('footer.line2')}</p>
-    <p class="mt-6 font-serif italic text-lg text-sepia">{t('footer.tagline')}</p>
-    <p class="mt-8 text-xs text-taupe">&copy; {year} Ohana. {t('footer.rights')}</p>
+<footer class="border-t border-border bg-ink text-ivory overflow-hidden">
+  <div class="mx-auto max-w-6xl px-6 py-24 md:py-32 flex flex-col items-center text-center gap-2">
+    <p class="font-serif italic text-3xl md:text-6xl leading-tight max-w-3xl text-ivory" data-reveal>&ldquo;{t('footer.tagline')}&rdquo;</p>
+    <p class="mt-16 font-serif text-lg tracking-[0.2em] uppercase" data-reveal style="transition-delay:0.1s">{t('footer.brand')}</p>
+    <p class="text-sm text-ivory/70" data-reveal style="transition-delay:0.15s">{t('footer.line1')}</p>
+    <p class="text-sm text-ivory/70" data-reveal style="transition-delay:0.2s">{t('footer.line2')}</p>
+    <p class="mt-10 text-xs text-ivory/50">&copy; {year} Ohana. {t('footer.rights')}</p>
   </div>
 </footer>

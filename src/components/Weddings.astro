@@ -5,23 +5,26 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const services = ['integral', 'diaB', 'finde', 'intimas', 'destino', 'medida'] as const;
 ---
-<section id="weddings" class="mx-auto max-w-4xl px-6 py-24 md:py-32 text-center">
-  <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('weddings.title')}</h2>
-  <p class="mt-8 text-taupe leading-relaxed text-lg">{t('weddings.intro1')}</p>
-  <p class="mt-6 text-taupe leading-relaxed text-lg">{t('weddings.intro2')}</p>
-  <p class="mt-6 font-serif italic text-xl text-sepia">{t('weddings.intro3')}</p>
+<section id="weddings" class="relative mx-auto max-w-4xl px-6 py-24 md:py-32 text-center overflow-hidden">
+  <span class="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 font-serif text-[30vw] md:text-[14vw] leading-none text-champagne/25 select-none" aria-hidden="true">02</span>
+  <div class="relative">
+    <h2 class="font-serif text-4xl md:text-6xl text-ink" data-reveal>{t('weddings.title')}</h2>
+    <p class="mt-8 text-taupe leading-relaxed text-lg font-light" data-reveal>{t('weddings.intro1')}</p>
+    <p class="mt-6 text-taupe leading-relaxed text-lg font-light" data-reveal style="transition-delay:0.08s">{t('weddings.intro2')}</p>
+    <p class="mt-6 font-serif italic text-2xl text-ink" data-reveal style="transition-delay:0.16s">{t('weddings.intro3')}</p>
+  </div>
 </section>
 
 <section class="bg-white border-y border-border">
-  <div class="mx-auto max-w-6xl px-6 py-24">
+  <div class="mx-auto max-w-6xl px-6 py-24 md:py-32">
     <div class="text-center max-w-xl mx-auto">
-      <h3 class="font-serif text-2xl md:text-3xl text-sepia">{t('weddings.servicesTitle')}</h3>
-      <p class="mt-4 text-taupe">{t('weddings.servicesSubtitle')}</p>
+      <h3 class="font-serif text-3xl md:text-4xl text-ink" data-reveal>{t('weddings.servicesTitle')}</h3>
+      <p class="mt-4 text-taupe" data-reveal style="transition-delay:0.08s">{t('weddings.servicesSubtitle')}</p>
     </div>
-    <div class="mt-14 grid gap-8 md:grid-cols-2">
+    <div class="mt-16 grid gap-8 md:grid-cols-2" data-reveal-group>
       {services.map((key) => (
-        <div class="rounded-2xl border border-border p-8 shadow-soft bg-ivory">
-          <h4 class="font-serif text-xl text-sepia">{t(`weddings.${key}.title`)}</h4>
+        <div class="group rounded-3xl border border-border p-9 shadow-soft bg-ivory transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(140,122,107,0.18)]" data-reveal>
+          <h4 class="font-serif text-2xl text-ink transition-transform duration-500 group-hover:translate-x-1">{t(`weddings.${key}.title`)}</h4>
           <p class="mt-2 text-sm italic text-taupe">{t(`weddings.${key}.tagline`)}</p>
           <p class="mt-4 text-sm text-taupe leading-relaxed whitespace-pre-line">{t(`weddings.${key}.description`)}</p>
           {t(`weddings.${key}.includes`) !== `weddings.${key}.includes` && (

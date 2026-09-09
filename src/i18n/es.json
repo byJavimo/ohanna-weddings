@@ -93,17 +93,12 @@
       "name": "Nombre",
       "email": "Email",
       "phone": "Teléfono",
-      "date": "Fecha estimada",
-      "guests": "N.º de invitados",
-      "budget": "Presupuesto estimado (€)",
       "language": "Idioma preferido"
     },
     "placeholders": {
       "name": "Tu nombre completo",
       "email": "tu@email.com",
-      "phone": "+34 600 000 000",
-      "guests": "120",
-      "budget": "25000"
+      "phone": "+34 600 000 000"
     },
     "languageOptions": {
       "es": "Español",

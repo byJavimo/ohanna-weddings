@@ -4,21 +4,30 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const images = [
-  '/images/portfolio-1.svg',
-  '/images/portfolio-2.svg',
-  '/images/portfolio-3.svg',
-  '/images/portfolio-4.svg',
+  '/images/inspo2.jpeg',
+  '/images/inspo3.jpeg',
+  '/images/inspo1.jpeg',
+  '/images/copas_champagne.jpeg',
 ];
 ---
-<section id="inspiration" class="mx-auto max-w-6xl px-6 py-24">
-  <div class="text-center max-w-xl mx-auto">
-    <h2 class="font-serif text-3xl md:text-4xl text-sepia">{t('inspiration.title')}</h2>
-    <p class="mt-4 text-taupe leading-relaxed">{t('inspiration.subtitle')}</p>
+<section id="inspiration" class="relative mx-auto max-w-6xl px-6 py-24 md:py-32 overflow-hidden">
+  <span class="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 font-serif text-[30vw] md:text-[14vw] leading-none text-champagne/25 select-none" aria-hidden="true">04</span>
+  <div class="relative text-center max-w-xl mx-auto">
+    <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>{t('inspiration.title')}</h2>
+    <p class="mt-4 text-taupe leading-relaxed" data-reveal style="transition-delay:0.08s">{t('inspiration.subtitle')}</p>
   </div>
-  <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-    {images.map((src) => (
-      <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-border">
-        <img src={src} alt="" class="w-full h-full object-cover" loading="lazy" />
+  <div class="relative mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5" data-reveal-group>
+    {images.map((src, i) => (
+      <div
+        class={`group aspect-[3/4] rounded-2xl overflow-hidden border border-border ${i % 2 === 1 ? 'md:mt-10' : ''}`}
+        data-reveal
+      >
+        <img
+          src={src}
+          alt=""
+          class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          loading="lazy"
+        />
       </div>
     ))}
   </div>
