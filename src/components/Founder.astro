@@ -1,0 +1,22 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<section id="founder" class="relative mx-auto max-w-6xl px-6 py-24 md:py-32 overflow-hidden">
+  <span class="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 font-serif text-[30vw] md:text-[14vw] leading-none text-champagne/25 select-none" aria-hidden="true">04</span>
+  <div class="relative grid gap-12 md:grid-cols-2 md:gap-16 items-center">
+    <div data-reveal>
+      <span class="font-sans text-xs tracking-[0.35em] uppercase text-taupe/80">{t('founder.eyebrow')}</span>
+      <h2 class="mt-4 font-serif text-3xl md:text-5xl text-ink">{t('founder.greeting')}</h2>
+      <p class="mt-8 text-taupe leading-relaxed text-base md:text-lg font-light">{t('founder.body1')}</p>
+      <p class="mt-6 text-taupe leading-relaxed text-base md:text-lg font-light">{t('founder.body2')}</p>
+      <p class="mt-6 text-taupe leading-relaxed text-base md:text-lg font-light">{t('founder.body3')}</p>
+      <p class="mt-6 text-taupe leading-relaxed text-base md:text-lg font-light">{t('founder.body4')}</p>
+    </div>
+    <div class="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-soft" data-reveal style="transition-delay:0.1s">
+      <img src="/images/arantxa_mora.jpeg" alt={t('founder.greeting')} class="h-full w-full object-cover" loading="lazy" />
+    </div>
+  </div>
+</section>

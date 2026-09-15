@@ -8,20 +8,21 @@
     "weddings": "Weddings",
     "events": "Events",
     "about": "About Ohana",
+    "founder": "Get to know me",
     "contact": "Contact"
   },
   "hero": {
     "eyebrow": "Love brings us together",
     "title": "Wedding & Event Planning",
-    "location": "",
-    "subtitle": "Celebrations designed around you, cared for from start to finish and created to enjoy what truly matters: being together.",
+    "location": "Madrid · Destination",
+    "subtitle": "We design, plan and take care of every detail to create celebrations that speak of you.",
     "cta": "Tell us what we're celebrating"
   },
   "about": {
     "title": "About Ohana",
-    "body1": "Ohana means family. A word that speaks of togetherness, of bonds, and of everything worth sharing.",
-    "body2": "We create and plan weddings and events with personality, weighing every decision with care and guiding the whole process to shape an experience that speaks of you, your story and your people.",
-    "body3": "We like to do things with intention: to think, design, organise and care, so that everything has a reason and every detail finds its place.",
+    "body1": "Ohana are the people we choose to share life's important moments with.",
+    "body2": "We create and plan weddings and events with a close, careful and very personal approach. We like to listen, understand what you imagine and turn it into a celebration that makes sense for you.",
+    "body3": "Behind the scenes there's planning, design, vendors, decisions and a great deal of organisation. In front, we want only what matters to remain: enjoying, celebrating and being with your people.",
     "quote": "How lucky, to have found each other."
   },
   "weddings": {
@@ -33,58 +34,72 @@
     "servicesSubtitle": "Every wedding starts differently. That's why there are different ways to support you, too.",
     "integral": {
       "title": "Full-service planning",
-      "tagline": "Complete support to shape your wedding.",
-      "description": "We're with you throughout the whole planning and design process: sourcing and managing vendors, budget, creative concept, planning, timings, and full coordination of the big day.",
+      "tagline": "You have the story. We know how to shape it.",
+      "description": "We shape your wedding and support you in every decision: we find the vendors that best fit you, take care of the budget, develop the design, and plan every detail so everything makes sense and follows one clear line.\n\nAnd when the day arrives, all you have to do is live it. We make sure everything happens as planned.",
       "includes": "planning · design · vendors · budget · timings · day-of coordination"
     },
     "diaB": {
       "title": "Day-of coordination",
-      "tagline": "You've planned every detail. Now it's time to live it.",
-      "description": "We step in during the final stretch to get to know everything you've prepared, review every detail, and coordinate vendors.\n\nWe build the definitive timing and make sure every moment happens as planned, handling anything unexpected so you don't have to think about a thing.\n\nOn your wedding day, your only task is to be present and enjoy it."
+      "tagline": "You created the day. We make it all happen.",
+      "description": "We step in during the final stretch to get to know every detail of your wedding, review everything you've organised, and coordinate all the vendors. On the big day, we'll be behind every timing, every setup and every moment, so you can be right where it matters: enjoying it with your people.",
+      "includes": "final review · vendors · timing · setup · day-of coordination"
     },
     "finde": {
       "title": "Ohana weekend",
-      "tagline": "When one day isn't enough.",
-      "description": "We design and coordinate a celebration that begins before the wedding and continues after: a welcome or pre-wedding event, the wedding, and the after-party.\n\nWe make sure the different moments feel like part of the same experience, and that your guests feel looked after throughout the whole weekend.",
-      "includes": "Pre-wedding · Wedding · After-party"
+      "tagline": "Because bringing your people together deserves more than just one day.",
+      "description": "We design and coordinate the whole weekend experience: from the first pre-wedding gathering to the plan for the next day, creating different moments that connect with each other and let your celebration be lived from start to finish.",
+      "includes": "pre-wedding · wedding · after-party · design · vendors · coordination"
     },
     "intimas": {
       "title": "Intimate weddings",
-      "tagline": "Fewer guests. The same emotion.",
-      "description": "Planning and design for intimate weddings of up to around 30 guests, where every choice carries even more weight."
+      "tagline": "Fewer guests. Closer to those who matter.",
+      "description": "We design and plan intimate celebrations of up to 30 guests, where every choice can be cared for in a far more personal way. Special venues, a shared table, details thought out for each guest, and real time to enjoy your people.",
+      "includes": "planning · design · vendors · details · coordination"
     },
     "destino": {
       "title": "Destination weddings",
-      "tagline": "Spain as the backdrop. Your people all around.",
-      "description": "We plan weddings for couples living outside Madrid or Spain who want to celebrate here, taking care of planning, venue and vendor sourcing, logistics, and guest coordination."
+      "tagline": "Wherever you want. Just as you've always imagined it.",
+      "description": "We plan your wedding in Spain, supporting you through the whole process, especially if you live abroad or choose to celebrate away from home. We find the right venues and vendors, coordinate logistics, and take care of every detail so distance never gets in the way.",
+      "includes": "planning · venues · vendors · logistics · coordination"
     },
     "medida": {
       "title": "Bespoke planning",
-      "tagline": "Some weddings don't need to start from scratch or fit into a package.",
-      "description": "We build personalised support wherever you are in the process: vendor sourcing, design, advice, budget review, planning, or specific needs.\n\nOnly where you truly need us."
+      "tagline": "Only where you need us. Exactly as much as you need.",
+      "description": "You may already have part of your wedding organised, or only need help at certain points. We build a service tailored to you, working only in the areas where you need support: vendor sourcing, design, budget, planning or advice.",
+      "includes": "advice · design · vendors · budget · planning"
     }
   },
   "events": {
     "title": "Events",
-    "intro1": "Some days deserve more than a celebration.",
-    "intro2": "We create personal and brand events designed from concept to execution, taking care of the space, the aesthetics, the vendors, and every detail of the experience.",
-    "intro3": "A good idea is remembered. A good experience, even more so.",
+    "intro1": "Some occasions call for something special.",
+    "intro2": "We shape personal and brand events with a careful, personal touch, from the creative concept through to the coordination of the day.",
+    "intro3": "You have the reason. We shape the celebration.",
     "servicesTitle": "Services",
     "privados": {
       "title": "Private events",
-      "tagline": "Some moments simply deserve to be celebrated.",
-      "description": "Birthdays, anniversaries, proposals, special dinners, private parties, and other personal celebrations.\n\nWe take care of the concept, space, vendors, decor, food, music, and coordination to turn a special occasion into an experience built around you."
+      "tagline": "Good moments start with a good reason to come together.",
+      "description": "Birthdays, anniversaries, proposals, special dinners and private celebrations designed around you and your people.\n\nWe shape every occasion, from the concept and venue search through to the food, decor, music and coordination, so all you have to do is enjoy it.",
+      "includes": "concept · venue · vendors · decor · food · coordination"
     },
     "corporativos": {
       "title": "Corporate events",
-      "tagline": "Events that represent who you are.",
-      "description": "We design and coordinate company gatherings, taking care of both the organisation and the guest experience.\n\nPresentations, corporate dinners, team gatherings, celebrations, conferences, and special events.",
-      "includes": "Concept · Venue · Production · Vendors · Timing · Coordination"
+      "tagline": "Events that speak of your brand.",
+      "description": "We design and organise brand experiences and company gatherings, taking care of both the concept and every detail of the execution.\n\nPresentations, corporate dinners, team gatherings, celebrations and special events designed to connect with people and convey who you are.",
+      "includes": "concept · venue · production · vendors · experience · coordination"
     }
   },
   "inspiration": {
     "title": "Inspiration",
     "subtitle": "A small visual selection that speaks to our world: tables that bring people together, places that inspire, details that tell stories, moments that stay with you."
+  },
+  "founder": {
+    "eyebrow": "Get to know me",
+    "greeting": "Hi, I'm Arantxa.",
+    "body1": "Ohana is much more than a project to me. It's an idea born from something very personal, and one I'm truly excited to watch grow.",
+    "body2": "I've spent years working in events, planning, coordinating and taking care of everything that happens behind the scenes so that, when the moment comes, everything works the way it should.",
+    "body3": "Creating Ohana is my way of devoting myself to everything that makes me happy: imagining, organising, caring for every detail and being part of days that mean so much.",
+    "body4": "And if there's one thing I want people to feel behind every celebration we create, it's exactly that: a lot of enthusiasm, a lot of care, and a huge amount of excitement to make it special.",
+    "quote": "How lucky, to have found each other."
   },
   "contact": {
     "title": "Contact",
