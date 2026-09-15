@@ -108,12 +108,14 @@
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
-      "language": "Preferred language"
+      "language": "Preferred language",
+      "message": "Message"
     },
     "placeholders": {
       "name": "Your full name",
       "email": "you@email.com",
-      "phone": "+1 555 000 0000"
+      "phone": "+1 555 000 0000",
+      "message": "Tell us a bit about your wedding"
     },
     "languageOptions": {
       "es": "Español",

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslations } from '../i18n/utils';
 
 const initialState = {
-  name: '', email: '', phone: '', language: '',
+  name: '', email: '', phone: '', language: '', message: '',
 };
 
 export default function ContactForm({ lang }) {
@@ -115,6 +115,20 @@ export default function ContactForm({ lang }) {
               <option value="es">{t('contact.languageOptions.es')}</option>
               <option value="en">{t('contact.languageOptions.en')}</option>
             </select>
+          </div>
+          <div className="sm:col-span-2" data-reveal>
+            <label htmlFor="message" className="block text-xs tracking-[0.25em] uppercase text-ivory/50 mb-2">
+              {t('contact.fields.message')}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={3}
+              value={values.message}
+              onChange={handleChange}
+              placeholder={t('contact.placeholders.message')}
+              className={`${inputClass} resize-none`}
+            />
           </div>
           <div className="sm:col-span-2 mt-6 flex flex-col items-center" data-reveal>
             <button

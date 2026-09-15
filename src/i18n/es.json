@@ -108,12 +108,14 @@
       "name": "Nombre",
       "email": "Email",
       "phone": "Teléfono",
-      "language": "Idioma preferido"
+      "language": "Idioma preferido",
+      "message": "Mensaje"
     },
     "placeholders": {
       "name": "Tu nombre completo",
       "email": "tu@email.com",
-      "phone": "+34 600 000 000"
+      "phone": "+34 600 000 000",
+      "message": "Contadnos un poco sobre vuestra boda"
     },
     "languageOptions": {
       "es": "Español",
