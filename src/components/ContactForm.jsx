@@ -7,7 +7,7 @@ const initialState = {
 
 export default function ContactForm({ lang }) {
   const t = useTranslations(lang);
-  const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY;
+  const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY?.trim();
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
